@@ -1,15 +1,450 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".MainActivity">
 
-    <TextView
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#00897B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="425dp"
+        android:layout_height="80dp"
+        android:background="#41717171"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/goalButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#009688"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
+        app:srcCompat="@drawable/icons8_mountain_50___" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#009688"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
+        app:layout_constraintVertical_bias="0.728"
+        app:srcCompat="@drawable/icons8_home_96___" />
+
+    <ImageButton
+        android:id="@+id/newsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#009688"
+        android:backgroundTint="#009688"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toStartOf="@+id/goalButton"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
+        app:srcCompat="@drawable/icons8_news_90___" />
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#009688"
+        android:backgroundTint="#009688"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
+        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
+        app:layout_constraintVertical_bias="0.842"
+        app:srcCompat="@drawable/icons8_help_100___" />
+
+    <ImageButton
+        android:id="@+id/planButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#009688"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toStartOf="@+id/helpButton"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/goalButton"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
+        app:srcCompat="@drawable/icons8_plan_50___" />
+
+    <ImageButton
+        android:id="@+id/profileButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toStartOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/avatar"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />>
+
+
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="25dp"
-        android:layout_centerInParent="true"/>
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fitnest" />
 
-</RelativeLayout>
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/icons8_settings_75___" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/todaySection"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#41717171"
+        app:barrierMargin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="79dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:progressTint="#00897B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.232"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.423" />
+
+        <TextView
+            android:id="@+id/todayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Today"
+            android:textColor="#00897B"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/goalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:text="Goal"
+            android:textColor="#00897B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/foodLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:text="Food"
+            android:textColor="#00897B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="48dp" />
+
+        <TextView
+            android:id="@+id/exerciseLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="212dp"
+            android:text="Exercise"
+            android:textColor="#00897B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodRemaining" />
+
+        <TextView
+            android:id="@+id/goalRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:text="2400"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@+id/foodRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="1dp"
+            android:text="600"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodLabel" />
+
+        <TextView
+            android:id="@+id/exerciseRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:text="600"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exerciseLabel" />
+
+        <TextView
+            android:id="@+id/remainingRule"
+            android:layout_width="240dp"
+            android:layout_height="23dp"
+            android:text="Remaining = Goal - Food + Exercise"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="104dp" />
+
+        <ImageView
+            android:id="@+id/foodIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/exerciseLabel"
+            app:layout_constraintTop_toTopOf="@+id/foodLabel"
+            app:srcCompat="@drawable/icons8_restaurant_50___" />
+
+        <ImageView
+            android:id="@+id/goalIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/foodIcon"
+            app:layout_constraintEnd_toStartOf="@+id/exerciseLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_goal_50___" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/exerciseLabel"
+            app:layout_constraintTop_toBottomOf="@+id/foodIcon"
+            app:srcCompat="@drawable/icons8_exercise_50___" />
+
+        <TextView
+            android:id="@+id/caloriesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calories"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="11dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/recipesButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:background="#72FFFFFF"
+        android:backgroundTint="#74FFFFFF"
+        android:drawableBottom="@drawable/chef"
+        android:text="Recipes"
+        android:textColor="#000000"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaySection"
+        app:rippleColor="#454545" />
+
+    <Button
+        android:id="@+id/vitalsButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:background="#72FFFFFF"
+        android:backgroundTint="#74FFFFFF"
+        android:drawableBottom="@drawable/icons8_health_100___"
+        android:text="Vitals"
+        android:textColor="#000000"
+        android:textColorHighlight="#00897B"
+        android:textColorHint="#00ACC1"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaySection"
+        app:rippleColor="#454545" />
+
+    <Button
+        android:id="@+id/friendsButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:background="#72FFFFFF"
+        android:backgroundTint="#74FFFFFF"
+        android:drawableBottom="@drawable/icons8_friends_100___"
+        android:text="Friends"
+        android:textColor="#000000"
+        android:textColorHighlight="#00897B"
+        android:textColorHint="#00ACC1"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipesButton"
+        app:rippleColor="#454545" />
+
+    <Button
+        android:id="@+id/mentalHealthButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:background="#72FFFFFF"
+        android:backgroundTint="#74FFFFFF"
+        android:drawableBottom="@drawable/icons8_mental_health_100___"
+        android:text="Mental Health"
+        android:textColor="#000000"
+        android:textColorHighlight="#00897B"
+        android:textColorHint="#00ACC1"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vitalsButton"
+        app:rippleColor="#454545" />
+
+    <Button
+        android:id="@+id/measurementsButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:background="#72FFFFFF"
+        android:drawableBottom="@drawable/icons8_measure_tape_96___"
+        android:text="Measure"
+        android:textColor="#000000"
+        android:textColorHighlight="#00897B"
+        android:textColorHint="#00ACC1"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/friendsButton"
+        app:rippleColor="#454545" />
+
+    <Button
+        android:id="@+id/recoverButton"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:background="#72FFFFFF"
+        android:backgroundTint="#74FFFFFF"
+        android:drawableBottom="@drawable/icons8_lotus_100___"
+        android:text="Recover"
+        android:textColor="#000000"
+        android:textColorHighlight="#00897B"
+        android:textColorHint="#00ACC1"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mentalHealthButton"
+        app:rippleColor="#454545" />
+
+    <Button
+        android:id="@+id/exerciseButton"
+        android:layout_width="303dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#72FFFFFF"
+        android:backgroundTint="#74FFFFFF"
+        android:text="Guided Exercise"
+        android:textColor="#000000"
+        android:textColorHighlight="#00897B"
+        android:textColorHint="#00ACC1"
+        android:textColorLink="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/measurementsButton"
+        app:rippleColor="#454545" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Measurements" >
+
+    <TextView
+        android:id="@+id/measurementsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Measurements"
+        android:textColor="#00897B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topNav10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backButton11"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/topNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topNav10"
+        android:layout_width="409dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:background="#41717171"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BMICal"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="BMI  Calculator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNav10" />
+
+    <TextView
+        android:id="@+id/sizeDownText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lbs to next size down"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/sizeDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="##"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="184dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

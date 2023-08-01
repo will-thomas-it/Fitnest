@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProfileScreen">
+
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="#00897B"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/topNav"
+            app:layout_constraintEnd_toEndOf="@+id/topNav"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/topNav" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topNav"
+            android:layout_width="409dp"
+            android:layout_height="80dp"
+            android:background="#41717171"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/backButton2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="@+id/topNav"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/setProfileButton"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:drawableTint="#000000"
+            android:text="Profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topNav" />
+
+        <Button
+            android:id="@+id/setNutritionButton"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:drawableTint="#000000"
+            android:text="Nutrition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setProfileButton" />
+
+        <Button
+            android:id="@+id/setSubscriptionButton"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:drawableTint="#000000"
+            android:text="Subscription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setNutritionButton" />
+
+        <Button
+            android:id="@+id/setAppearenceButton"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:drawableTint="#000000"
+            android:text="App Appearence"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setSubscriptionButton" />
+
+        <Button
+            android:id="@+id/setLogoutButton"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:drawableTint="#000000"
+            android:text="Logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setAppearenceButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recover" >
+
+    <TextView
+        android:id="@+id/recoverTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recover"
+        android:textColor="#00897B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topNav11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backButton12"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/topNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topNav11"
+        android:layout_width="409dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:background="#41717171"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="375dp"
+        android:layout_height="134dp"
+        android:src="@android:drawable/btn_star"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <TextView
+        android:id="@+id/meditationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Guided Meditation"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+    <TextView
+        android:id="@+id/spaText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="At home spa ideas"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton16"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton16"
+        app:layout_constraintStart_toStartOf="@+id/imageButton16"
+        app:layout_constraintTop_toTopOf="@+id/imageButton16"
+        app:layout_constraintVertical_bias="0.704" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="375dp"
+        android:layout_height="134dp"
+        android:src="@android:drawable/btn_star"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="265dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
